@@ -17,6 +17,7 @@
     "dotenv": "^17.2.3",
     "expo-ecomerce": "file:..",
     "express": "^5.2.1",
+    "inngest": "^3.46.0",
     "mongoose": "^9.0.0"
   }
 }
