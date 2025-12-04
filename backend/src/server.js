@@ -20,8 +20,10 @@ if(ENV.NODE_ENV=="production"){
         res.sendFile(path.join(__dirname,"../admin","dist","index.html"))
     })
 }
-
-app.listen(3000,()=>{
+const startServer = async ()=>{
+    await connectDB()
+    app.listen(3000,()=>{
     console.log("server is running")
-    connectDB()
 })
+}
+ startServer()
