@@ -56,10 +56,12 @@ const userSchema = new mongoose.Schema({
     },
     addresses:[addressSchema],
 
-    wishlist:{
+    wishlist:[
+      {
         type:mongoose.Schema.Types.ObjectId,
         ref:"product"
-    }
+      }
+    ]
 },{timestamps:true})
 
 export const User = mongoose.model("User",userSchema)
