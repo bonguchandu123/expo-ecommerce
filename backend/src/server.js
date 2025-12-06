@@ -16,7 +16,7 @@ app.use(clerkMiddleware())
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
 app.use("/api/admin",adminRoutes)
-app.use("/api/user",userRoutes)
+app.use("/api/users",userRoutes)
 
 app.get("/api/app",(req,res)=>{
     res.status(201).json({message:"hii there"})
