@@ -21,6 +21,7 @@
     "express": "^5.2.1",
     "inngest": "^3.46.0",
     "mongoose": "^9.0.0",
-    "multer": "^2.0.2"
+    "multer": "^2.0.2",
+    "stripe": "^20.0.0"
   }
 }
