@@ -53,3 +53,13 @@ eas build:configure
 ```
 eas build -p android --profile preview
 ```
+
+
+## Android build 
+
+```
+npx expo prebuild --clean 
+```
+
+## END
+
