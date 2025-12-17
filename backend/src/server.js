@@ -17,6 +17,7 @@ import paymentRoutes from "./routes/payment.route.js";
 
 const app = express()
 const __dirname = path.resolve()
+//
 
 app.use(express.json())
 app.use(clerkMiddleware())
