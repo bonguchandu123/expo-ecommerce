@@ -1,3 +1,4 @@
+
 {
   "expo": {
     "name": "mobile",
@@ -56,7 +57,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "a3cc27d6-4d87-4537-b40e-5566db65c0c6"
+        "projectId": "8b655604-e725-481c-ba96-7c500c889015"
       }
     }
   }
