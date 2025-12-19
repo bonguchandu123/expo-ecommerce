@@ -2,7 +2,7 @@
 {
   "expo": {
     "name": "Kutty Store",
-    "slug": "kutty-store",
+    "slug": "mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/applogo.png",
