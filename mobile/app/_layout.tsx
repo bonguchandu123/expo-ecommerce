@@ -53,7 +53,7 @@ export default Sentry.wrap(function RootLayout() {
       tokenCache={tokenCache}
     >
       <QueryClientProvider client={queryClient}>
-        <StripeProvider publishableKey={process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY || "pk_test_51SeU5NJKw4HPfVtG3YjIM3pCbjHC5uauPuLmyK1tLdp90GFLTmbX9NMJn4YR51sw6pHmM1QD9ykTotm1bf2NvgSi00EovPTACX"}>
+        <StripeProvider publishableKey={"pk_test_51SeU5NJKw4HPfVtG3YjIM3pCbjHC5uauPuLmyK1tLdp90GFLTmbX9NMJn4YR51sw6pHmM1QD9ykTotm1bf2NvgSi00EovPTACX"}>
           <Stack screenOptions={{headerShown:false}}/>
         </StripeProvider>
       </QueryClientProvider>
