@@ -1,16 +1,17 @@
 
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "Kutty Store",
+    "slug": "kutty-store",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/applogo.png",
-    "scheme": "mobile",
+    "scheme": "kuttystore",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.chandu9966.kuttystore"
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +22,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.chandu9966.mobile"
+      "package": "com.chandu9966.kuttystore"
     },
     "web": {
       "output": "static",
