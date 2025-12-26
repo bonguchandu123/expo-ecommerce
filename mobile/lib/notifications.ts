@@ -1,11 +1,14 @@
+import { useEffect } from "react";
 import * as Notifications from "expo-notifications";
 
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldShowBanner: true, // ✅ REQUIRED
-    shouldShowList: true,   // ✅ REQUIRED
-    shouldPlaySound: true,
-    shouldSetBadge: false,
-  }),
-});
+export function useNotificationHandler() {
+  useEffect(() => {
+    Notifications.setNotificationHandler({
+      handleNotification: async () => ({
+        shouldShowAlert: true,
+        shouldShowSound: true,
+        shouldSetBadge: false,
+      }),
+    });
+  }, []);
+}

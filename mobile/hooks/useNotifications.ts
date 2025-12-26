@@ -3,13 +3,16 @@ import * as Notifications from "expo-notifications";
 import * as Device from "expo-device";
 import { Platform } from "react-native";
 import { useApi } from "@/lib/api";
+import { useAuth } from "@clerk/clerk-expo";
 
 export default function useNotifications() {
   const api = useApi();
+  const { isSignedIn, isLoaded } = useAuth();
 
   useEffect(() => {
+    if (!isLoaded || !isSignedIn) return;
     registerForPushNotifications();
-  }, []);
+  }, [isLoaded, isSignedIn]);
 
   async function registerForPushNotifications() {
     try {
@@ -20,12 +23,9 @@ export default function useNotifications() {
 
       if (status !== "granted") return;
 
-      const tokenResponse =
-        await Notifications.getExpoPushTokenAsync();
+      const token =
+        (await Notifications.getExpoPushTokenAsync()).data;
 
-      const token = tokenResponse.data;
-
-      // send token to backend
       await api.post("/users/push-token", {
         expoPushToken: token,
       });

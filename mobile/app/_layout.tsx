@@ -10,6 +10,7 @@ import * as Sentry from "@sentry/react-native";
 import { StripeProvider } from "@stripe/stripe-react-native";
 
 import useNotifications from "@/hooks/useNotifications";
+import { useNotificationHandler } from "@/lib/notifications";
 
 // ---------------- SENTRY ----------------
 Sentry.init({
@@ -54,6 +55,7 @@ const queryClient = new QueryClient({
 // ---------------- ROOT ----------------
 function Root() {
   useNotifications(); // ✅ SAFE now (inside ClerkProvider)
+    useNotificationHandler();
 
   return (
     <QueryClientProvider client={queryClient}>
